@@ -1,122 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-ao" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="pt-ao">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="js/script.js"></script>
     <title>Calculadora</title>
-    <link rel="stylesheet" href="/css/master.css">
-   
-      <style media="screen">
-        *{
-  margin:0;
-  padding:0;
-}
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.forma-basse{
-  margin-top: 10%;
-  width: 420px;
-  height: 410px;
-  background-color: #000;
-  border: solid 4px ;
-}
-input[ type="text"]{
-  font-size: 25pt;
-  text-align: right;
-  width: 350px;
-  height: 55px;
-  margin: 25px 25px 0 45px;
-  background: #fff;
-}
-.btns1{
-  margin-top: 20px;
-  background: rgb(192,192,192);
-  width: 300px;
-  height: 300px;
-  display:inline-block;
-  justify-content: space-between;
-  align-items: center;
-}
-.btns1 input[type="button"]{
-  margin: 3px;
-  width: 70px;
-  height: 50px;
-  font-size: 14pt ;
-  border: 0 ;
-  border-radius: 5px;
-}
-.btns1 input[type="button"]:hover{
-background: rgba(125,125,125);
-color: #fff;
-}
-.btns2{
-  position: relative;
-  z-index: 1;
-  /*margin-top: 20px;*/
-  left: 60%;
-  margin-top:-71.5%;
-  background: rgb(192,192,192);
-  width: 170px;
-  height: 300px;
-
-}
-.btns2 input[type="button"]{
-  background: #000;
-  color: #fff;
-  margin: 3px;
-  width: 150px;
-  height: 50px;
-  font-size: 14pt ;
-  border: 0 ;
-  border-radius: 5px;
-}
-.btns2 input[type="button"]:hover{
-background: rgba(125,125,125);
-}
-
-    </style>
-  </head>
-  <body>
-    <form action="" name="calc" class="forma-basse">
-          <input type="text" name="visor" disabled >
-          <div class="btns1">
-            <input type="button" name="" value="7" onclick="botao(value)">
-            <input type="button" name="" value="8" onclick="botao(value)">
-            <input type="button" name="" value="9" onclick="botao(value)">
-            <input type="button" name="" value="6" onclick="botao(value)">
-            <input type="button" name="" value="5" onclick="botao(value)">
-            <input type="button" name="" value="4" onclick="botao(value)">
-            <input type="button" name="" value="3" onclick="botao(value)">
-            <input type="button" name="" value="2" onclick="botao(value)">
-            <input type="button" name="" value="1" onclick="botao(value)">
-            <input type="button" name="" value="0" onclick="botao(value)">
-            <input type="button" name="" value="C" onclick="limpar()">
-          </div>
-          <div class="btns2">
-            <input type="button" name="" value="*" onclick="botao(value)">
-            <input type="button" name="" value="/" onclick="botao(value)">
-            <input type="button" name="" value="-" onclick="botao(value)">
-            <input type="button" name="" value="+" onclick="botao(value)">
-            <input type="button" name="" value="=" onclick="calcular()">
-          </div>
-      </form>
-       <script type="text/javascript"   >
-     var valor, result;
-
-function botao(num) {
-  valor = document.calc.visor.value += num;
-}
-function limpar() {
-  document.calc.visor.value = "";
-}
-
-function calcular() {
-    result = eval(valor);
-    document.calc.visor.value = result.toLocaleString('pt-ao');
-}
-
-    </script>
-  </body>
+</head>
+<body>
+    <form action="" name="calculadora">
+        <input type="text" name="valor" id="" disabled>
+        <div class="btns">
+            <div class="btn1">
+                <input type="button" value="7" onclick="btn(value)">
+                <input type="button" value="8" onclick="btn(value)">
+                <input type="button" value="9" onclick="btn(value)">
+                <input type="button" value="4" onclick="btn(value)">
+                <input type="button" value="5" onclick="btn(value)">
+                <input type="button" value="6" onclick="btn(value)">
+                <input type="button" value="1" onclick="btn(value)">
+                <input type="button" value="2" onclick="btn(value)">
+                <input type="button" value="3" onclick="btn(value)">
+                <input type="button" value="0" onclick="btn(value)">
+                <input type="button" value="." onclick="btn(value)">
+                <input id="lmp"type="button" value="C" onclick="limpar()">
+               
+            </div>
+            <div class="btn2">
+                <input type="button" value="/" onclick="btn(value)">
+                <input type="button" value="*" onclick="btn(value)">
+                <input type="button" value="-" onclick="btn(value)">
+                <input type="button" value="+" onclick="btn(value)">
+                <input id="igual"type="button" value="=" onclick="calcula()">
+                
+            </div>
+        </div>
+    </form>       
+</body>
 </html>
