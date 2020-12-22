@@ -2,7 +2,7 @@
 Estudo sobre javascript
 
 <p align="center">ETAPAS
-1 - Criar as Tags HTML
+1 - Criar as Tags HTML</br>
 2 - Chamar a função btnc sobre os inputs
 3 - Estilizar o HTML 
 4 - Criar as funções JAVASCRIPT
